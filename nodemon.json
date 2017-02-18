@@ -1,0 +1,17 @@
+{
+  "verbose": false,
+  "restartable": "rs",
+  "events": {
+    "restart": "echo \"App restarted due to:\n'$FILENAME'\""
+  },
+  "ignore": [
+    ".git",
+    "npm-debug.log",
+    "node_modules/**/node_modules",
+    "dist"
+  ],
+  "watch": [
+    "core",
+    "src"
+  ]
+}

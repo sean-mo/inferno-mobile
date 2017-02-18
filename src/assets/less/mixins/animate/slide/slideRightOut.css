@@ -1,0 +1,16 @@
+@keyframes slideRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0%;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 100% 0%;
+    transform: scaleX(.8);
+  }
+}
+
+.slideRightOut {
+  animation-name: slideRightOut;
+}

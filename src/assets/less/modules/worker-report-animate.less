@@ -1,0 +1,111 @@
+/* 
+	
+	animate class
+
+*/
+
+// animate loop function
+.filter-box-child-animate(@counter, @i: 0, @delay: 0.2s) when (@i <= @counter) {
+  .filter-box-child-animate(@counter, (@i + 1));    // next iteration
+  &:nth-child(@{i}){
+    &:extend(.animated, .fadeInRight);
+    animation-duration: 0.2s;
+    animation-timing-function: @ease-out;
+    animation-delay: @delay * (@counter - @i);
+  }	
+}
+
+// animate loop function
+.filter-query-child-animate(@counter, @i: 0, @delay: 0.2s) when (@i <= @counter) {
+  .filter-query-child-animate(@counter, (@i + 1));    // next iteration
+  & > :nth-child(@{i}){
+    &:extend(.animated, .fadeInUp);
+    animation-duration: 0.2s;
+    animation-timing-function: @ease-out;
+    animation-delay: @delay + 0.2s * @i;
+  }	
+  
+}
+
+.filter-query-table-animate(@counter, @i: 0) when (@i <= @counter) {
+  .filter-query-table-animate(@counter, (@i + 1));    // next iteration
+  & > :nth-child(@{i}){
+    &:extend(.animated, .fadeInUp);
+    animation-duration: 0.1s;
+    animation-timing-function: @ease-out;
+    animation-delay: 0.7s + 0.1s * @i;
+  }	
+  
+}
+
+/*
+  enter out animate
+*/
+.feature-Container-enter {
+	& > :nth-child(1){
+    	&:extend(.animated, .fadeInRight);
+    	animation-duration: 0.4s;
+    	animation-timing-function: @ease-out;
+    }	
+
+    .filter-query-box  {
+    	.filter-query-child-animate(2);
+    }
+
+    .filter-box {
+		label {
+			&:nth-child(1){
+			    &:extend(.animated, .fadeInRight);
+			    animation-duration: 0.2s;
+			    animation-timing-function: @ease-out;
+			    animation-delay: 0.5s;
+			}	
+		}
+
+		p {
+			a {
+				.filter-box-child-animate(4);
+			}
+		}
+	}
+
+	.tabsbar {
+		&:extend(.animated, .fadeInUp);
+	    animation-duration: 0.2s;
+	    animation-timing-function: @ease-out;
+	    animation-delay: 0.5s;
+
+	    li {
+	    	transition: all 0.2s @ease-out;
+	    }
+	}
+
+	.ec-table {
+		&:extend(.animated, .fadeInRight);
+		animation-duration: 0.2s;
+		animation-timing-function: @ease-out;
+		animation-delay: 0.6s;
+
+		tbody {
+			.filter-query-table-animate(10);
+		}
+	}
+
+	.ec-pagination {
+		&:extend(.animated, .fadeInUp);
+	    animation-duration: 0.2s;
+	    animation-timing-function: @ease-out;
+	    animation-delay: 1s;
+	}	
+
+	.ec-pagination-list {
+		li {
+			&:hover {
+				transform: scale(1.05);
+			}
+			&:active {
+				transform: scale(0.9);
+			}
+		}
+	}
+}

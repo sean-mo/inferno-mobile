@@ -1,0 +1,45 @@
+.ec-pagination {
+	.size(100%, 25px, 25px);
+	color: #666666;
+}
+
+.ec-pagination-total-text {
+	float: left;
+	.size(auto, 22px, 22px);
+	text-align: left;
+	
+	b {
+		color: #369ada;
+		font-weight: 400;
+	}
+}
+
+.ec-pagination-list {
+	float: right;
+	.size(auto, 20px, 20px);
+	text-align: right;
+
+	li {
+		
+		padding: 0 8px 0 8px;
+		float: left;
+		margin: 0 0 0 4px;
+		.size(auto, 20px, 20px);
+		text-align: center;
+		border: #e6e6e6 1px solid;
+		border-radius: 3px;
+		cursor: pointer;
+		user-select: none;
+
+		&:hover,
+		&.selected {
+			color: #444444;
+			font-weight: 700;
+			background-color: darken(#ffffff, 3%);
+		}
+
+		&:active {
+			background-color: darken(#ffffff, 8%);
+		}
+	}
+}

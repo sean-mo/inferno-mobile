@@ -1,0 +1,22 @@
+.tabs {
+	text-align: center;
+}
+
+.tabsbar {
+	display: inline-block;
+	.size(auto, 28px, 28px);
+	border: #369ada 1px solid;
+	border-radius: 3px;
+
+	li {
+		display: inline-block;
+		padding: 0 10px 0 10px;
+		color: #369ada;
+		cursor: pointer;
+
+		&.selected {
+			color: #ffffff;
+			background-color: #369ada;
+		}
+	}
+}

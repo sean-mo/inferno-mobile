@@ -1,0 +1,285 @@
+.workerReport-box {
+	padding: 10px 0 10px 0;
+	overflow: hidden;
+
+	.ec-report-tip {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.workerReport-content {
+	float: left;
+	.size(562px, auto);
+
+	.report-date {
+		border-bottom: #e6e6e6 1px solid;
+		
+		.size(100%, 28px, 28px);
+
+		.date {
+			float: left;
+			font-size: 14px;
+			text-indent: 5px;
+		}
+
+		.lastDateTime {
+			float: right;
+			color: #b2b2b2;
+
+			.iconfont {
+				position: relative;
+				top: -1px;
+				color: #babfc3;
+				font-size: 14px;
+				vertical-align: middle;
+			}
+		}
+
+		ins {
+			padding: 0 10px 0 5px;
+		}
+	}
+}
+
+.workerReport-header {
+	display: block;
+	.size(100%, 35px, 35px);
+
+	h3 {
+		float: left;
+		.size(auto, 35px, 35px);
+		font-weight: 700;
+		color: #333333;
+		font-size: 12px;
+	}
+
+	p {
+		float: right;
+
+		a.button {
+			color: #5d5d5d;
+			margin-right: 0;
+		}
+	}
+
+	.iconfont {
+		font-size: 14px;
+	}
+}
+
+.workerReport-text {
+	.size(auto, 188px);
+	padding: 12px 10px 12px 10px;
+	border: #d9d9d9 1px solid;
+	overflow-y: auto;
+	line-height: 25px;
+}
+
+.workerReport-results {
+	position: relative;
+	border: #ececec 1px solid;
+	text-align: center;
+
+	&:before {
+		position: absolute;
+		top: 15px;
+		left: 49%;
+		.size(1px, 30px);
+		border-right: #ececec 1px solid;
+		content: '';
+	}
+
+	li {
+		display: inline-block;
+		.size(49%, 60px, 60px);
+		color: #717171;
+
+	}
+
+	strong {
+		padding: 0 15px 0 15px;
+		font-size: 48px;
+		color: #3d98d1;
+		vertical-align: middle;
+		font-weight: 100;
+	}
+}
+
+.workerReport-comments {
+	li  {
+		margin-top: 5px;
+		color: #666666;
+	}
+
+	img {
+		float: left;
+	}
+
+	p {
+		line-height: 20px;
+		margin-left: 40px;
+		border-bottom: #e6e6e6 1px solid;
+	}
+
+	strong {
+		color: #2f77c9;
+	}
+
+	ins {
+		display: block;
+		.size(auto, 25px, 25px);
+		color: #999999;
+	}
+
+	a {
+		margin-left: 5px;
+		font-weight: 700;
+		color: #258ed1;
+	}
+}
+
+.workerReport-input {
+	display: block;
+
+	.btn-primary {
+		float: right;
+		margin: 0;
+		.size(77px, 26px, 26px);
+		padding: 0 0 0 0;
+		text-align: center;
+
+		ins {
+			position: relative;
+			top: -2px;
+			margin-left: 15px;
+			border-color: #acd8f4 transparent transparent;
+
+			&:before {
+				position: absolute;
+				top: -9px;
+				left: -12px;
+				border-right: #3c91cb 1px solid;
+				height: 14px;
+				content: '';
+			}
+
+			&:after {
+				position: absolute;
+				top: -9px;
+				left: -11px;
+				border-left: #62b1e6 1px solid;
+				height: 14px;
+				content: '';
+			}
+		}
+	}
+}
+
+.workerReport-dateSelector {
+	float: right;
+	.size(235px, auto);
+
+	.header {
+		.size(100%, 28px, 28px);
+
+		.iconfont {
+			vertical-align: middle;
+			margin-left: -3px;
+			font-size: 14px;
+			display: inline;
+			color: #d27a78;
+		}
+	}
+}
+
+.workerReport-modal {
+	.popuper {
+		.size(828px, 568px);
+	}
+
+	.popuper-body {
+		padding: 0 0 10px 0;
+		overflow: hidden;
+	}
+
+	.workerReport-content {
+		padding: 0 10px 0 10px;
+		border-right: #e4ecf0 1px solid;
+
+		.report-date {
+			border-bottom: 0;
+		}
+
+		.ec-report-tip {
+			margin-left: -10px;
+			width: 100%;
+		}
+	}
+	
+}
+
+.workerReport-msg-modal {
+	.popuper {
+		.size(648px, 448px);
+	}
+
+	.popuper-body {
+		height: 414px;
+		padding: 10px 10px 10px 10px;
+		overflow-y: auto;
+	}
+
+	.workerReport-comments {
+		padding: 0 0 20px 0;
+		b {
+			color: #404040;
+		}
+
+		cite {
+			margin: 5px 0 5px 0;
+			padding: 5px 10px 5px 10px;
+			display: block;
+			color: #6a6a6a;
+			border-radius: 2px;
+			background-color: #f0f0f0;
+		}
+
+		span {
+			display: block;
+		}
+	}
+}
+
+.filter-radio {
+	position: absolute;
+	top: 50px;
+	right: 22px;
+	padding: 0 15px 0 20px;
+	.size(auto, 20px, 20px);
+	border: #b9d8eb 1px solid;
+	color: #68a7da;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: padding 0.2s @ease-out;
+
+	ins {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		.size(18px, 18px);
+		border-radius: 18px;
+		background-color: #d1e1eb;
+		border: #d1e1ee 1px solid;
+		background: url(images/cycle.png) no-repeat;
+		transition: transform 0.2s @ease-out;
+	}
+
+	&:hover {
+		padding: 0 25px 0 10px;
+		ins {
+			transform: translateX(63px);
+		}
+	}
+}

@@ -1,0 +1,182 @@
+.ec-member-modal {
+	.popuper {
+		.size(578px, 440px);
+		overflow: visible;
+		&:before {
+			position: absolute;
+			left: 8%;
+			top: -7px;
+			.size(0, 0);
+		    border-width: 0 8px 7px;
+		    border-style:solid;
+		    border-color:transparent transparent #ffffff;/*透明 透明  灰*/
+		    content: '';
+		}
+	}
+
+	.popuper-body {
+		padding: 10px 20px 15px 20px;
+		border-radius: 3px;
+	}
+	
+}
+
+
+.ec-member-selector {
+	width: 100%;
+}
+
+.ec-member-box {
+	display: inline-block;
+	vertical-align: middle;
+	width: 238px;
+
+
+	h6 {
+		font-size: 14px;
+		height: 25px;
+		color: #666666;
+	}
+
+	.warp-box {
+		.size(100%, 348px);
+		border-radius: 3px;
+		border: #d9d9d9 1px solid;
+	}
+
+	&.query-box {
+
+		li {
+
+			&:hover {
+				background: 0;
+			}
+
+			a {
+				display: inline-block;
+				.size(auto, 100%);
+				padding: 0 5px 0 5px;
+				color: #666666;
+				border-radius: 3px;
+				transition: background 0.3s linear;
+
+				&:hover {
+					color: #333333;
+					text-decoration: none;
+					background-color: #ebebeb;
+					transform: scale(1.05);
+				}
+
+				&:active {
+					color: #000000;
+					transform: scale(0.95);
+				}
+			}
+		}
+
+		.ec-member-selector {
+			height: 292px;
+		}
+		.ec-text {
+			display: block;
+			margin: 5px auto 5px auto;
+			width: 208px;
+		}
+	}
+
+	&.selected-box {
+		li {
+			padding: 0 10px 0 10px;
+		}
+		.btn-close {
+			float: right;
+			color: #333333;
+			opacity: 0;
+			transform: scale(0);
+			transition: all 0.2s @ease-out;
+
+			&:active {
+				transform: scale(0.95);
+			}
+		}
+
+		li:hover {
+			.btn-close {
+				text-decoration: none;
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.ec-member-selector {
+	height: 100%;
+	overflow-y: auto;	
+
+	li {
+		padding: 0 5px 0 5px;
+		clear: both;
+		.size(auto, 30px, 30px);
+		cursor: pointer;
+		transition: background 0.2s @ease-in;
+
+		&:before {
+			display: inline-block;
+			.size(0, 0);
+			border-width: 3px 0 3px 4px;
+			border-style: solid;
+			border-color: transparent transparent transparent #8a8a8a;
+			content: '';
+			margin-right: 3px;
+		}
+		
+		&:hover {
+			background-color: #ebebeb;
+		}
+
+		&.expand {
+			height: auto;
+			&:hover {
+				background-color: #ffffff;
+			}
+		}
+
+		&.child {
+			&:before {
+				display: none;
+			}
+		}
+
+		> ul {
+			padding: 0 0 0 15px;
+		}
+	}
+}
+
+.ec-member-add {
+	display: inline-block;
+	vertical-align: middle;
+	.size(50px, 22px, 22px);
+	font-size: 18px;
+	color: #d8d8d8;
+	font-weight: 700;
+	text-align: center;
+
+	a {
+		color: #d8d8d8;
+		&:hover {
+			color: darken(#d8d8d8, 10%);
+			text-decoration: none;
+		}
+	}
+
+}
+
+/* animate */
+.ec-member-enter {
+	.popuper {
+		&:extend(.animated, .slideUpIn);
+		animation-duration: 0.8s;
+	}
+}

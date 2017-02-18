@@ -1,0 +1,123 @@
+@import '~less/mixins/px2rem.less';
+
+@lineColor: #999999;
+
+body {
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#container {
+   
+    font-size: 12px ;
+    [data-dpr="2"] &{
+        font-size: 24px;
+    }
+    [data-dpr="3"] &{
+        font-size: 36px;
+    }
+ }
+
+
+.container {
+    .header {
+        box-sizing: border-box;
+        width: 100%;
+        height: px2rem(100px);
+        line-height: px2rem(100px);
+        padding: 0 px2rem(20px) 0 px2rem(20px);
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+    }
+    .tree {
+        padding: px2rem(20px) px2rem(10px) px2rem(20px) px2rem(10px);
+        li {
+            padding: px2rem(10px) px2rem(15px) px2rem(10px) px2rem(15px);
+        }
+    }
+    .item {
+       left: px2rem(10px);
+       height: px2rem(40px);
+       line-height: px2rem(40px);
+       padding: 0 px2rem(5px);
+       overflow: hidden;
+       position: relative;
+       box-sizing: border-box;
+       cursor: pointer;
+       color: #666666;
+       white-space: nowrap; 
+       vertical-align: middle;
+       background: #ebebeb;
+       box-sizing: border-box;
+       border-radius: 3px;
+       strong {
+           margin: 0 px2rem(5px);
+       }
+       .cite {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            z-index: 0;
+            height: 90%;
+            background: rgba(6, 218, 130, 0.3);
+            border: #333333 1px solid;
+            box-shadow: inset #ffffff 0 0 3px;
+            border-radius: 2px;
+            &.warn {
+                background-color: rgba(255, 235, 0, 0.6);
+            }
+            &.danger {
+                background-color: rgba(255, 59, 0, 0.63);
+            }
+        }
+    }
+
+    .plus-square,
+    .square,
+    .minus-square {
+        float: left;
+        margin-top: px2rem(5px);
+        position: relative;
+        width: px2rem(30px);
+        height: px2rem(30px);
+        border: #333333 1px solid;
+        vertical-align: middle;
+        border-radius: 2px;
+    }
+    .plus-square,
+    .minus-square {
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            top: px2rem(15px);
+            left: px2rem(3px);
+            width: px2rem(25px);
+            height: px2rem(26px);
+            border-top: #333333 1px solid;
+            transition: all 0.1s linear;
+        }
+        &:after {
+            opacity: 0;
+        }
+    }
+    .square {
+        opacity: 1;
+        border-radius: px2rem(26px);
+    }
+    .plus-square {
+        &:after {
+            opacity: 1;
+            top: px2rem(2.5px);
+            left: px2rem(-10px);
+            transform: rotate(90deg);
+        }
+    }
+    
+}
