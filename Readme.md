@@ -42,24 +42,24 @@ npm run prod
 ```
 ├── core 
 │   ├── config.js 
-│   ├── env.js
-│   ├── helpers
-│   ├── polyfills.js
-│   ├── run.js
-│   ├── utils
-│   └── webpack
+│   ├── env.js       （基于API的环境配置）
+│   ├── helpers      
+│   ├── polyfills.js （相关polyfill）
+│   ├── run.js   ( 前端工程化 执行代码 )
+│   ├── utils    ( 工具库：hotcss / http / dateTime )
+│   └── webpack （ webpack 2 配置相关 )
 ├── mock
 │   └── tracedetail.json
 ├── nodemon.json
 ├── package.json
 ├── src
-│   ├── api
-│   ├── assets
-│   ├── components
-│   ├── pages
-│   ├── server
-│   ├── standalone
-│   ├── stores
-│   └── template
+│   ├── api         （ 请求服务API，也可以改成Service)
+│   ├── assets      （ 静态资源，包括LESS常用的模块）
+│   ├── components   （基础、业务组件，目前无内容）
+│   ├── pages         （ 页面结构，无内容）
+│   ├── server         （服务端相关，无内容，后期逐步区分client/server代码）
+│   ├── standalone     （ 单独发布的页面，里边有链路跟踪的代码）
+│   ├── stores         （数据模型管理，涉及LS、通讯等，无内容）
+│   └── template        （HTML Template） 
 └── yarn.lock
 ```
