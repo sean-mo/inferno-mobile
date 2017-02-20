@@ -39,7 +39,7 @@ npm run prod
 
 # 项目结构
 
-
+```
 ├── core 
 │   ├── config.js 
 │   ├── env.js
@@ -62,3 +62,4 @@ npm run prod
 │   ├── stores
 │   └── template
 └── yarn.lock
+```
