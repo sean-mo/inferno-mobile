@@ -34,6 +34,10 @@ npm run dev
 npm run prod
 ```
 
+- 运行 
+
+` http://localhost:2002/trace.html`
+
 ## FAQ
 > 可能会遇到nodemon 不存在，可以npm i nodemon -g 安装
 

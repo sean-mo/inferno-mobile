@@ -71,7 +71,7 @@ export function PUT(url, parameter, options) {
         credentials: 'include',
         mode: 'cors',
         headers: fetchHeader
-    }, options || {})).checkHttpError().fetchJSON()
+    }, options || {})).then(disposeResponse)
 }
 
 
@@ -83,7 +83,7 @@ export function POST(url, parameter, options) {
         credentials: 'include',
         mode: 'cors',
         headers: fetchHeader
-    }, options || {})).checkHttpError().fetchJSON()
+    }, options || {})).then(disposeResponse)
 }
 
 
@@ -94,5 +94,4 @@ export function DELETE(url, parameter, options) {
         credentials: 'include',
         mode: 'cors',
         headers: fetchHeader
-    }, options || {})).checkHttpError().fetchJSON()
-}
+    }, options || {})).then(disposeResponse)
