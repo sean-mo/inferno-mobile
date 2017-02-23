@@ -95,3 +95,4 @@ export function DELETE(url, parameter, options) {
         mode: 'cors',
         headers: fetchHeader
     }, options || {})).then(disposeResponse)
+}

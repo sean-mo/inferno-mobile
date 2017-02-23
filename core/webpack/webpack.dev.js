@@ -2,6 +2,7 @@ const path = require('path')
 const logger = require('debug')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
+const DashboardPlugin = require('webpack-dashboard/plugin');
 const config = require('./webpack.base.js')
 const port = 2002
 // Merge with base configuration
@@ -23,7 +24,8 @@ config.plugins.push(
     new webpack.NamedModulesPlugin(),
     new webpack.WatchIgnorePlugin([
         // path.join(__dirname, '../../dist')
-    ])
+    ]),
+    new DashboardPlugin()
 )
 
 // Run DEV server for hot-reloading
