@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./core/run.js",
+    "dev": "webpack-dashboard -- cross-env NODE_ENV=development nodemon ./core/run.js",
     "prod": "cross-env NODE_ENV=production node ./core/run.js"
   },
   "dependencies": {
