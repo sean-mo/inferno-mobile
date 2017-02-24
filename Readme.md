@@ -6,7 +6,7 @@
 
 > 项目采用 `Inferno`，号称史上最快的VDOM、类似React的API和相应的全家桶，性能可以看这里：
 
-[http://infernojs.org/benchmarks/dbmonster-lazy/](http://infernojs.org/benchmarks/dbmonster-lazy/)
+[https://rawgit.com/infernojs/dbmonster-inferno/master/index.html](https://rawgit.com/infernojs/dbmonster-inferno/master/index.html)
 
 # 入门
 

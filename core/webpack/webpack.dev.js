@@ -2,7 +2,7 @@ const path = require('path')
 const logger = require('debug')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin')
 const config = require('./webpack.base.js')
 const port = 2002
 // Merge with base configuration
